@@ -25,5 +25,11 @@ namespace StoreServices.Api.Author.Controllers
             return await _mediator.Send(new Query.AuthorList());
         }
 
+
+        [HttpGet]
+        public async Task<ActionResult<AuthorBook>> GetAuthorById(Guid id)
+        {
+            return await _mediator.Send(new QueryFilter.AuthorUnique() { AuthorBookId = id });
+        }
     }
 }

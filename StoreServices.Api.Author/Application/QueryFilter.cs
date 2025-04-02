@@ -6,16 +6,16 @@ namespace StoreServices.Api.Author.Application
 {
     public class QueryFilter
     {
-        public class UniqueAuthor : IRequest<AuthorBook>
+        public class AuthorUnique : IRequest<AuthorBook>
         {
             public Guid AuthorBookId { get; set; }
         }
 
-        public class Handler(AuthorContext context) : IRequestHandler<UniqueAuthor, AuthorBook>
+        public class Handler(AuthorContext context) : IRequestHandler<AuthorUnique, AuthorBook>
         {
             private readonly AuthorContext _context = context;
 
-            public async Task<AuthorBook> Handle(UniqueAuthor request, CancellationToken cancellationToken)
+            public async Task<AuthorBook> Handle(AuthorUnique request, CancellationToken cancellationToken)
             {
                var author =  await _context.AuthorBooks.FindAsync(request.AuthorBookId);
 
