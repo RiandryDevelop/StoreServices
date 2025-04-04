@@ -1,9 +1,8 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using StoreServices.Api.Author.Application;
 using StoreServices.Api.Author.Persistence;
-using System.Net.NetworkInformation;
-using System.Reflection;
 
 namespace StoreServices.Api.Author
 {
@@ -27,19 +26,21 @@ namespace StoreServices.Api.Author
                 options.UseNpgsql(connectionString);
             });
 
-            // Servicios
+            // Services
             builder.Services.AddRouting(options =>
             {
                 options.LowercaseUrls = true;
             });
             builder.Services.AddControllers();
+            builder.Services.AddFluentValidationAutoValidation();
+            builder.Services.AddValidatorsFromAssemblyContaining<New.ExecuteValidator>();
             builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(New.Handler).Assembly));
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
-            // Middlewares
+            // Middle wares
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
