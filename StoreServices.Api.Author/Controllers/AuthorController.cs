@@ -20,14 +20,14 @@ namespace StoreServices.Api.Author.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<AuthorBook>>> GetAuthors()
+        public async Task<ActionResult<List<AuthorDto>>> GetAuthors()
         {
             return await _mediator.Send(new Query.AuthorList());
         }
 
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<AuthorBook>> GetAuthorById(string id)
+        public async Task<ActionResult<AuthorDto>> GetAuthorById(string id)
         {
             return await _mediator.Send(new QueryFilter.AuthorUnique() { AuthorBookGuid = id });
         }

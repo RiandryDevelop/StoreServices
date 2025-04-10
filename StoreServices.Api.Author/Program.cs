@@ -32,6 +32,7 @@ namespace StoreServices.Api.Author
                 options.LowercaseUrls = true;
             });
             builder.Services.AddControllers();
+            builder.Services.AddAutoMapper(typeof(MappingProfile));
             builder.Services.AddFluentValidationAutoValidation();
             builder.Services.AddValidatorsFromAssemblyContaining<New.ExecuteValidator>();
             builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(New.Handler).Assembly));
