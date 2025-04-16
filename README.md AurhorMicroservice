@@ -1,0 +1,12 @@
+#AuthorMicroservice
+This microservice is part of the StoreServices system. It handles all author-related operations, such as creation, retrieval, and management of author data.
+
+Tech Stack:
+
+.NET 8
+
+Dapper
+
+Entity Framework Core
+
+PostgreSQL
