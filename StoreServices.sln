@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreServices.Api.Author", "StoreServices.Api.Author\StoreServices.Api.Author.csproj", "{86A5EA3B-9DAF-4DD7-82DB-C843AACBCB59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreServices.Api.Author", "StoreServices.Api.Author\StoreServices.Api.Author.csproj", "{86A5EA3B-9DAF-4DD7-82DB-C843AACBCB59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreServices.Api.Book", "StoreServices.Api.Book\StoreServices.Api.Book.csproj", "{FBFC7088-06A1-4B51-BA00-9A16BDE64ABD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{86A5EA3B-9DAF-4DD7-82DB-C843AACBCB59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86A5EA3B-9DAF-4DD7-82DB-C843AACBCB59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86A5EA3B-9DAF-4DD7-82DB-C843AACBCB59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBFC7088-06A1-4B51-BA00-9A16BDE64ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBFC7088-06A1-4B51-BA00-9A16BDE64ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBFC7088-06A1-4B51-BA00-9A16BDE64ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBFC7088-06A1-4B51-BA00-9A16BDE64ABD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
