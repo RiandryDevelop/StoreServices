@@ -7,7 +7,7 @@ namespace StoreServices.Api.Author.Application
 {
     public class New
     {
-        // Comando (Request)
+
         public class Execute : IRequest<Unit>
         {
             public required string Name { get; set; }
@@ -30,7 +30,6 @@ namespace StoreServices.Api.Author.Application
         }
 
 
-        // Handler del comando
         public class Handler(AuthorContext context) : IRequestHandler<Execute, Unit>
         {
             private readonly AuthorContext _context = context;
@@ -53,7 +52,7 @@ namespace StoreServices.Api.Author.Application
                     return Unit.Value;
                 }
 
-                throw new Exception("No se pudo insertar el autor");
+                throw new Exception("Could not insert the author");
             }
         }
     }
